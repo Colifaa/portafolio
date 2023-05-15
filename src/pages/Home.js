@@ -106,29 +106,31 @@ function Home() {
             </Chakra.Tab>
           </Chakra.Link>
 
-          <Chakra.Link href="http://localhost:3000">
-            <Chakra.Tab
-              _hover={{
-                color: "white",
-                bg: "blue.400",
-                fontWeight: "bold",
-                fontSize: "xl",
-              }}
-              transition="all 0.2s"
-              onClick={() => handleTabClick("Proyectos")}
-              bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
-              paddingX={6}
-            >
-              <Chakra.Box fontSize="2xl"
-                _hover={{
-                  bg: "blue.400",
-                  fontSize: "xl",
-                }}
-             > 
-              🏠
-              </Chakra.Box>
-            </Chakra.Tab>
-          </Chakra.Link>
+          <Chakra.Link href="/">
+  <Chakra.Tab
+    _hover={{
+      color: "white",
+      bg: "blue.400",
+      fontWeight: "bold",
+      fontSize: "xl",
+    }}
+    transition="all 0.2s"
+    onClick={() => handleTabClick("Proyectos")}
+    bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
+    paddingX={6}
+  >
+    <Chakra.Box
+      fontSize="2xl"
+      _hover={{
+        bg: "blue.400",
+        fontSize: "xl",
+      }}
+    >
+      🏠
+    </Chakra.Box>
+  </Chakra.Tab>
+</Chakra.Link>
+
 
         </Chakra.TabList>
       </Chakra.Tabs>
