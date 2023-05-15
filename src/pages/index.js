@@ -6,17 +6,13 @@ import Link from "next/link";
 import { Box, Heading, Text, Button, Stack } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
+import Footer from "@/Components/Footer/Footer";
+import Contacto from "@/Components/Contacto/Contacto";
 
 export default function Landing() {
-
-
-
   return (
-      
-   
-    
     <Box
-      bg="#146C94"
+      bg="#073041"
       p={8}
       minHeight="100vh"
       bgImage="Gatito.png"
@@ -30,8 +26,6 @@ export default function Landing() {
       border="6px solid black" // Añade el estilo de borde deseado
       borderRadius="xl" // Define el radio de borde deseado
     >
-    
-
       <Head>
         <title>Mi portafolio</title>
         <meta
@@ -72,14 +66,20 @@ export default function Landing() {
         </Text>
 
         <Link href="/Home">
-   <Button colorScheme="teal" size="lg" fontSize="xl" fontFamily="cursive"  _hover={{
-    backgroundColor: "red",
-    transform: "scale(1.1)",
-    boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-  }}
-  transition="transform 0.3s ease, box-shadow 0.3s ease" >
-Home
-</Button>
+          <Button
+            colorScheme="teal"
+            size="lg"
+            fontSize="xl"
+            fontFamily="cursive"
+            _hover={{
+              backgroundColor: "red",
+              transform: "scale(1.1)",
+              boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
+            }}
+            transition="transform 0.3s ease, box-shadow 0.3s ease"
+          >
+            Home
+          </Button>
         </Link>
         <Image
           objectFit="contain"
@@ -87,10 +87,28 @@ Home
           src="https://38.media.tumblr.com/06f0d5cf2e7491acc2fbe2e39031c1b1/tumblr_n9cnttf1FZ1ty0fy0o4_500.gif"
           alt="Dan Abramov"
         />
-      
-
+      </Box>
+      <Box
+      color="orange"
+        h="20"
+        position="fixed"
+        bottom={0}
+        left={119}
+        right={119}
+        mt="-10"
+        style={{
+          background: "linear-gradient(to right, #073041, black, #073041)",
+          borderWidth: "0 0px 6px 0px",
+          borderStyle: "solid",
+          borderColor: "transparent transparent black transparent",
+          
+        }}
+        borderRadius="base"
+              >
+        <div style={{ marginTop: "15px" }}>
+          <Contacto />
+        </div>
       </Box>
     </Box>
-    
   );
 }

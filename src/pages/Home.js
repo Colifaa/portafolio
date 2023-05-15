@@ -5,72 +5,26 @@ import Lotus from "../Components/Lotus/Lotus.jsx";
 import { useDisclosure } from "@chakra-ui/react";
 import Contacto from "@/Components/Contacto/Contacto.jsx";
 import { Howl } from "howler";
+import Footer from "@/Components/Footer/Footer.jsx";
+
+import Musica from "@/Components/Musica/Musica.jsx";
 
 function Home() {
   const [activeTab, setActiveTab] = useState("Inicio");
   const { isOpen, onToggle } = useDisclosure();
   const [hydrated, setHydrated] = useState(false);
 
+
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
 
   useEffect(() => {
     setHydrated(true);
   }, []);
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [sound, setSound] = useState(null);
-  const [seekPosition, setSeekPosition] = useState(0);
- 
-
-  useEffect(() => {
-    const audio = new Howl({
-      src: "BARDERO - Esperanza (Letra).mp3",
-      autoplay: isPlaying,
-      loop: true,
-      seek: seekPosition,
-      onplay: () => {
-        setIsPlaying(true);
-      },
-      onpause: () => {
-        setIsPlaying(false);
-        if (sound) {
-          setSeekPosition(sound.seek());
-        }
-      },
-      onend: () => {
-        setIsPlaying(false);
-        setSeekPosition(0);
-      },
-    });
-
-    setSound(audio);
-
-    return () => {
-      audio.stop();
-    };
-  }, []);
-
-  const play = () => {
-    if (sound && !isPlaying) {
-      sound.play();
-    }
-  };
-
-  const pause = () => {
-    if (sound && isPlaying) {
-      sound.pause();
-    }
-  };
-
-  const restart = () => {
-    if (sound) {
-      sound.stop();
-      setSeekPosition(0);
-      sound.play();
-    }
-  };
 
   return (
     <>
@@ -85,6 +39,8 @@ function Home() {
         right="0"
         zIndex="sticky"
       >
+    
+
         <Chakra.Box
           mt="2"
           mb="4"
@@ -93,20 +49,7 @@ function Home() {
           color="white"
           
         >
-          <Chakra.Box mb={2} >
-            Información del tema: BARDEROS - Esperanza
-          </Chakra.Box>
-          <Chakra.Box display="flex" justifyContent="center">
-            <Chakra.Button onClick={play} disabled={isPlaying} mx={2}>
-              ▶️
-            </Chakra.Button>
-            <Chakra.Button onClick={pause} disabled={!isPlaying} mx={2}>
-              ⏸️
-            </Chakra.Button>
-            <Chakra.Button onClick={restart} disabled={!isPlaying} mx={2}>
-              ⏯️
-            </Chakra.Button>
-          </Chakra.Box>
+      <Musica/>
         </Chakra.Box>
 
       <Chakra.TabList justifyContent="space-around">
@@ -122,7 +65,8 @@ function Home() {
     transition="all 0.2s"
     onClick={() => handleTabClick("Inicio")}
     bg={activeTab === "Inicio" ? "transparent" : "transparent"}
-    paddingX={6}
+    paddingX={2}
+       fontSize="2xl"
   >
     Inicio
   </Chakra.Tab>
@@ -138,7 +82,8 @@ function Home() {
               transition="all 0.2s"
               onClick={() => handleTabClick("Proyectos")}
               bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
-              paddingX={6}
+              paddingX={2}
+              fontSize="2xl"
             >
               Proyectos
             </Chakra.Tab>
@@ -154,11 +99,37 @@ function Home() {
               transition="all 0.2s"
               onClick={() => handleTabClick("Contactos")}
               bg={activeTab === "Contactos" ? "transparent" : "transparent"}
-              paddingX={6}
+              paddingX={2}
+              fontSize="2xl"
             >
               Contactos
             </Chakra.Tab>
           </Chakra.Link>
+
+          <Chakra.Link href="http://localhost:3000">
+            <Chakra.Tab
+              _hover={{
+                color: "white",
+                bg: "blue.400",
+                fontWeight: "bold",
+                fontSize: "xl",
+              }}
+              transition="all 0.2s"
+              onClick={() => handleTabClick("Proyectos")}
+              bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
+              paddingX={6}
+            >
+              <Chakra.Box fontSize="2xl"
+                _hover={{
+                  bg: "blue.400",
+                  fontSize: "xl",
+                }}
+             > 
+              🏠
+              </Chakra.Box>
+            </Chakra.Tab>
+          </Chakra.Link>
+
         </Chakra.TabList>
       </Chakra.Tabs>
       <Chakra.Box
@@ -176,9 +147,7 @@ function Home() {
         borderRadius="2xl"
       >
         <Chakra.Box maxW="800px" textAlign="center" bgPos="center">
-          <Chakra.Heading as="h1" mb={8}>
-            Bienvenidos!
-          </Chakra.Heading>
+       
 
           <Chakra.Flex
             direction="column"
@@ -304,6 +273,7 @@ function Home() {
           <Contacto />
         </Chakra.Box>
       </Chakra.Box>
+      <Footer/>
     </>
   );
 }
