@@ -12,7 +12,7 @@ function Videos() {
         
       }}
     bgPos="center"
-   borderRadius="2xl"
+
     mx="auto"
     display="flex"
     justifyContent="space-between"

@@ -21,7 +21,7 @@ function InformacionJorge() {
         
       }}
     bgAttachment="inherit"
-    borderRadius="2xl"
+    
     mt="140px"
     
   >
