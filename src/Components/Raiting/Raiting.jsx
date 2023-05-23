@@ -95,12 +95,14 @@ function Rating() {
       </Chakra.HStack>
       <Chakra.HStack mt={4}>
       <Chakra.VStack spacing={2}>
+        
   <Chakra.Input
     type="text"
     placeholder="Nombre"
     value={name}
     onChange={handleNameChange}
     isInvalid={name.trim() === ""}
+    mb="-2"
   />
   {name.trim() === "" && (
     <Chakra.Text fontSize="sm" color="red.500">
@@ -115,6 +117,7 @@ function Rating() {
     value={comment}
     onChange={(e) => setComment(e.target.value)}
     isInvalid={comment.trim() === ""}
+    mb="-2"
   />
   {comment.trim() === "" && (
     <Chakra.Text fontSize="sm" color="red.500">
@@ -184,7 +187,7 @@ function Rating() {
       <Chakra.Box>
         {comments.length > 4 && (
           <Chakra.Button
-            mt="4"
+            mt="2"
             colorScheme="blue"
             onClick={handleModalOpen}
             _hover={{ backgroundColor: "blue.600" }}
