@@ -6,7 +6,11 @@ function Lotus() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Chakra.Box>
-      <Chakra.Button onClick={onOpen}>Open Modal</Chakra.Button>
+      <Chakra.Button mt="4"
+        colorScheme="blue"
+
+        _hover={{ backgroundColor: "blue.600" }}
+        _focus={{ boxShadow: "outline" }} onClick={onOpen}>Ver proyectos</Chakra.Button>
 
       <Chakra.Modal
         size="full"

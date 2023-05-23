@@ -91,7 +91,7 @@ function NavTab() {
           paddingX={2}
           fontSize="2xl"
         >
-          Contactos
+          Contacto
         </Chakra.Tab>
       </Chakra.Link>
 
