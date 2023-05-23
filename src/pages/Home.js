@@ -7,7 +7,7 @@ import Contacto from "@/Components/Contacto/Contacto.jsx";
 import { Howl } from "howler";
 import Footer from "@/Components/Footer/Footer.jsx";
 
-import Musica from "@/Components/Musica/Musica.jsx";
+
 import InformacionJorge from "@/Components/InformacionJorge/InformacionJorge.jsx";
 import Videos from "@/Components/Videos/Videos.jsx";
 import NavTab from "@/Components/NavTab/NavTab.jsx";
