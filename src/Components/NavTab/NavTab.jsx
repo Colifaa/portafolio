@@ -44,7 +44,7 @@ function NavTab() {
       <Chakra.Link href="#inicio" >
         <Chakra.Tab
           _hover={{
-            color: "white",
+            color:  "#073041", 
             bg: "blue.400",
             fontWeight: "bold",
             fontSize: "xl",
@@ -53,8 +53,8 @@ function NavTab() {
           transition="all 0.2s"
           onClick={() => handleTabClick("Inicio")}
           bg={activeTab === "Inicio" ? "transparent" : "transparent"}
-          paddingX={2}
           fontSize="2xl"
+          borderRadius="md"
           
         >
           Inicio
@@ -63,7 +63,7 @@ function NavTab() {
       <Chakra.Link href="#proyectos">
         <Chakra.Tab
           _hover={{
-            color: "white",
+            color: "#073041",
             bg: "blue.400",
             fontWeight: "bold",
             fontSize: "xl",
@@ -71,8 +71,8 @@ function NavTab() {
           transition="all 0.2s"
           onClick={() => handleTabClick("Proyectos")}
           bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
-          paddingX={2}
           fontSize="2xl"
+          borderRadius="md"
         >
           Proyectos
         </Chakra.Tab>
@@ -80,7 +80,7 @@ function NavTab() {
       <Chakra.Link href="#contactos">
         <Chakra.Tab
           _hover={{
-            color: "white",
+            color: "#073041",
             bg: "blue.400",
             fontWeight: "bold",
             fontSize: "xl",
@@ -90,6 +90,7 @@ function NavTab() {
           bg={activeTab === "Contactos" ? "transparent" : "transparent"}
           paddingX={2}
           fontSize="2xl"
+          borderRadius="md"
         >
           Contacto
         </Chakra.Tab>
@@ -98,7 +99,7 @@ function NavTab() {
       <Chakra.Link href="/">
         <Chakra.Tab
           _hover={{
-            color: "white",
+            color: "#073041",
             bg: "blue.400",
             fontWeight: "bold",
             fontSize: "xl",
@@ -106,7 +107,7 @@ function NavTab() {
           transition="all 0.2s"
           onClick={() => handleTabClick("Proyectos")}
           bg={activeTab === "Proyectos" ? "transparent" : "transparent"}
-          paddingX={6}
+          borderRadius="md"
         >
           <Chakra.Box
             fontSize="2xl"
