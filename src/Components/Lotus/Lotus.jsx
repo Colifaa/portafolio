@@ -10,7 +10,7 @@ function Lotus() {
         colorScheme="blue"
 
         _hover={{ backgroundColor: "blue.600" }}
-        _focus={{ boxShadow: "outline" }} onClick={onOpen}>Ver proyectos</Chakra.Button>
+        _focus={{ boxShadow: "outline" }} onClick={onOpen} mb="-5">Ver proyectos</Chakra.Button>
 
       <Chakra.Modal
         size="full"
