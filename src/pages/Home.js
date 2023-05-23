@@ -22,9 +22,10 @@ function Home() {
 
   return (
     <>
+    
       <NavTab />
       <InformacionJorge />
-      <Videos />
+     
 
       <Chakra.Box
         style={{
@@ -42,9 +43,11 @@ function Home() {
         id="proyectos"
       >
         <Chakra.Box maxW="800px" textAlign="center">
+          
           <Chakra.Heading as="h2" mt="-20">
             Mis proyectos
           </Chakra.Heading>
+
 
           {hydrated && <Lotus />}
           <Raiting/>
