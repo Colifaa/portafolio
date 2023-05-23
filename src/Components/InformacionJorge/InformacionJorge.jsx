@@ -1,8 +1,10 @@
 import React from 'react'
 import * as Chakra from "@chakra-ui/react";
+import Videos from '../Videos/Videos';
 function InformacionJorge() {
     const { isOpen, onToggle } = Chakra.useDisclosure();
   return (
+    
     <Chakra.Box
     as="section"
     minHeight="100vh"
@@ -96,10 +98,15 @@ function InformacionJorge() {
             el que esté involucrado.
           </Chakra.Text>
           </Chakra.Box>
+          <Videos />
         </Chakra.Collapse>
+        
       </Chakra.Flex>
+      
     </Chakra.Box>
+   
   </Chakra.Box>
+
   )
 }
 
