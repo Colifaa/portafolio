@@ -76,8 +76,8 @@ function Rating() {
 
   return (
 
-    <Chakra.VStack mt="8">
-      <Chakra.HStack mb="5">
+    <Chakra.VStack mt="7">
+      <Chakra.HStack mb="2">
         {stars.map((_, index) => {
           const ratingValue = index + 1;
           return (

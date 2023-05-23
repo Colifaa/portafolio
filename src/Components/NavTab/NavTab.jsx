@@ -55,7 +55,7 @@ function NavTab() {
           bg={activeTab === "Inicio" ? "transparent" : "transparent"}
           fontSize="2xl"
           borderRadius="md"
-          
+          mr="-20"
         >
           Inicio
         </Chakra.Tab>
