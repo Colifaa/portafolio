@@ -47,6 +47,7 @@ function Home() {
           </Chakra.Heading>
 
           {hydrated && <Lotus />}
+          <Raiting/>
         </Chakra.Box>
       </Chakra.Box>
       <Chakra.Box
@@ -92,7 +93,7 @@ function Home() {
           >
             Descargar CV
           </Chakra.Link>
-          <Raiting/>
+        
         </Chakra.Box>
       </Chakra.Box>
       <Footer />
