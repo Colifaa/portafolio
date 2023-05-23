@@ -44,7 +44,7 @@ function Home() {
       >
         <Chakra.Box maxW="800px" textAlign="center">
           
-          <Chakra.Heading as="h2" mt="-5">
+          <Chakra.Heading as="h2" mb="-1" mt="-16">
             Mis proyectos
           </Chakra.Heading>
 
