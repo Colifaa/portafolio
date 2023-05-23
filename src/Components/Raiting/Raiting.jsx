@@ -132,7 +132,7 @@ function Rating() {
           colorScheme="blue"
           onClick={handleSubmit}
           isDisabled={!isFormValid}
-          mt="4"
+          mt="1"
         >
           Enviar calificación
         </Chakra.Button>
@@ -149,13 +149,14 @@ function Rating() {
       <Chakra.Text fontSize="lg" fontWeight="bold" mt={4}>
         Comentarios:
       </Chakra.Text>
+     
       <Chakra.Flex flexWrap="wrap" >
         {comments.slice(0, 4).reverse().map((comment) => (
           <Chakra.Box
             key={comment.id}
             borderWidth="1px"
             p={4}
-            mt={2}
+            mt={1}
             mr={2}
             flexBasis="calc(50% - 8px)"
             display="flex"
