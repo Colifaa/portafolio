@@ -76,8 +76,9 @@ function Rating() {
 
   return (
 
-    <Chakra.VStack mt="7">
+    <Chakra.VStack mt="7" mb="-20">
       <Chakra.HStack mb="2">
+     
         {stars.map((_, index) => {
           const ratingValue = index + 1;
           return (
@@ -92,7 +93,9 @@ function Rating() {
           );
         })}
         <Chakra.Text>{currentValue} estrellas</Chakra.Text>
+        
       </Chakra.HStack>
+      
       <Chakra.HStack mt={4}>
       <Chakra.VStack spacing={2}>
         
@@ -127,12 +130,12 @@ function Rating() {
 </Chakra.VStack>
 
       </Chakra.HStack>
-      <Chakra.Box>
+      <Chakra.Box >
         <Chakra.Button
           colorScheme="blue"
           onClick={handleSubmit}
           isDisabled={!isFormValid}
-          mt="1"
+          mt="5"
         >
           Enviar calificación
         </Chakra.Button>
