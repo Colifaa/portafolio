@@ -78,7 +78,7 @@ function Home() {
           <Contacto />
           <Chakra.Link
           mt="50"
-            href="/cv jorge PDF.pdf"
+            href="/cv jorge.pdf"
             download
             color="blue.500"
             fontWeight="bold"
